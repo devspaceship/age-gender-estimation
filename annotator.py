@@ -40,7 +40,7 @@ class GenderAnnotator:
         # Face Detector
         self.detector = dlib.get_frontal_face_detector()
 
-    def estimate_gender(self, path: Path) -> Union[float, None]:
+    def estimate_manliness(self, path: Path) -> Union[float, None]:
         img = load_image(path)
         input_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         img_h, img_w, _ = np.shape(input_img)
